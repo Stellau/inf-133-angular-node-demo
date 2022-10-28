@@ -1,0 +1,17 @@
+<div>
+  <p>Please enter a dog breed to fetch random pictures of it.</p>
+  <form class="flex" (ngSubmit)="onSubmit()" #dog="ngForm">
+    <div>
+      <div>
+        <label for="breed" class="form-label">Breed</label>
+        <input required type="text" name="breed" id="breed" ngModel #breed="ngModel" />
+      </div>
+      <p class="form-text" *ngIf="!breed.valid && breed.touched">Please enter a valid dog breed!</p>
+    </div>
+    <div>
+      <button class="btn btn-dark" [disabled]="!dog.valid">
+        Fetch Dog Pics
+      </button>
+    </div>
+  </form>
+</div>

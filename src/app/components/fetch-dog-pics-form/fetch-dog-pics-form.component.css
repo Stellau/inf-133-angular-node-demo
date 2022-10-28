@@ -1,0 +1,19 @@
+button {
+  margin-top: 0.8rem;
+}
+
+label {
+  margin-right: 1rem;
+}
+
+form div {
+  margin: 1rem;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+p {
+    margin-left: 1rem;
+}

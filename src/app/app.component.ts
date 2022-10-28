@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FetchDogsService } from './services/fetch-dogs.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'inf-133-angular-node-demo';
+  dogImages: string[] = [];
+  breed: string = "";
+  isLoading: boolean = false;
+  constructor(private fetchDogsService: FetchDogsService) {
+    this.isLoading = true;
+    this.fetchDogsService.imagesReceived.subscribe((dogImages) => {
+      this.dogImages = dogImages;
+    });
+    this.fetchDogsService.breedFetched.subscribe((breed) => {
+      this.breed = breed;
+    });
+    this.isLoading = false;
+  }
 }
