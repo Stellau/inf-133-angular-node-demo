@@ -10,4 +10,4 @@ Run `npm install` in API terminal.\
 Run `node app.js` in API terminal to start server.\
 Run `ng serve` in main terminal to start frontend.\
 Navigate to `http://localhost:4200/`.\
-Input any breed from `https://dog.ceo/api/breeds/list` to test the program.
+Input any breed from `https://dog.ceo/api/breeds/list` to fetch for 10 random pictures of the breed.
